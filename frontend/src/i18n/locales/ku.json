@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Sereke",
+    "newOffer": "Pêşniyara Nû",
+    "dashboard": "Panela Kontrolê",
+    "categories": "Beşan",
+    "services": "Karûbar",
+    "customers": "Xerîdar",
+    "settings": "Mîhengên",
+    "logout": "Derçûn",
+    "adminLogin": "Têketina Admin"
+  },
+  "home": {
+    "title": "GELBE-GUHEZÎN",
+    "subtitle": "Pêşniyarên Profesyonel ên Guhezînê",
+    "description": "Pêşniyarên profesyonel ên guhezînê li gorî standardên swîsreyî biafirînin - bilez, hêsan û bi panela rêveberiyê ya tevahî.",
+    "createOffer": "Pêşniyarek Biafirîne",
+    "adminPanel": "Panela Admin",
+    "demoLogin": "Têketina Admin: admin / admin123"
+  },
+  "offer": {
+    "title": "Pêşniyar",
+    "create": "Biafirîne",
+    "preview": "Pêşdîtin",
+    "print": "Çapkirin / PDF",
+    "loadExample": "Pêşniyara Nimûne Barkir"
+  },
+  "customer": {
+    "select": "Xerîdarek Hilbijêre (Îxtiyarî)",
+    "new": "Xerîdarê Nû (bi dest têkeve)",
+    "autoFilled": "Daneyên xerîdar bixweber hatine dagirtin",
+    "fromDatabase": "Daneyên xerîdar ji danegirê hatine barkirin. Ji bo guhartinê, 'Xerîdarê Nû' hilbijêre."
+  },
+  "form": {
+    "offerNumber": "Hejmara Pêşniyarê",
+    "offerDate": "Dîroka Pêşniyarê",
+    "customerNumber": "Hejmara Xerîdarî",
+    "contactPerson": "Kesê Têkiliyê",
+    "category": "Kategoriya Karûbarî",
+    "currentLocation": "Cihê Niha",
+    "newLocation": "Cihê Nû",
+    "elevator": "Asanşor Heye",
+    "salutation": "Nav",
+    "firstName": "Navê Yekem",
+    "lastName": "Paşnav",
+    "street": "Kolane",
+    "zipCode": "Koda Posteyê",
+    "city": "Bajar",
+    "phone": "Têlefon",
+    "email": "E-mail",
+    "save": "Tomar Bike",
+    "cancel": "Betal Bike",
+    "create": "Biafirîne",
+    "update": "Nûkirin",
+    "delete": "Jê Bibe",
+    "edit": "Serrast Bike"
+  },
+  "services": {
+    "additional": "Karûbarên Zêde",
+    "noServices": "Ji bo vê kategoriyê karûbarên zêde tune ne",
+    "clickToActivate": "Ji bo çalakkirinê bitikîne",
+    "price": "Biha"
+  },
+  "admin": {
+    "welcome": "Bi xêr hatî",
+    "overview": "Li vir dîmena giştî ya pêşniyarên guhezîna te heye",
+    "totalOffers": "Tevahiya Pêşniyaran",
+    "monthlyOffers": "Vê Mehê",
+    "totalRevenue": "Tevahiya Dahatê",
+    "activeOffers": "Pêşniyarên Çalak",
+    "recentOffers": "Pêşniyarên Nûjen",
+    "quickActions": "Kirarên Bilez",
+    "newCustomer": "Xerîdarê Nû",
+    "allCustomers": "Hemû Xerîdar",
+    "newService": "Karûbarê Nû",
+    "newCategory": "Kategoriya Nû"
+  },
+  "common": {
+    "loading": "Tê barkirin...",
+    "error": "Şaşî",
+    "success": "Serkeftin",
+    "confirm": "Pejirandin",
+    "search": "Lêgerîn",
+    "filter": "Parzûn",
+    "active": "Çalak",
+    "inactive": "Neçalak",
+    "yes": "Erê",
+    "no": "Na"
+  }
+}

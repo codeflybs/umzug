@@ -1,0 +1,82 @@
+<analysis>
+The trajectory details the iterative development of a Multi-Service Offer Management System. The project began with a user request for a simple, single-purpose moving company offer generator based on a specific layout. The initial AI engineer's approach was to rapidly build a frontend-only prototype using mock data to provide a tangible product quickly, following the development workflow.
+
+The user's requests quickly escalated in complexity, transforming the project scope into a full-fledged, multi-tenant, multi-lingual SaaS application. Key user-driven pivots included adding a comprehensive admin panel, making the system modular for different service industries (movers, repairs, cleaning), and introducing extensive configurability (company branding, colors, VAT, services, pricing). A significant later request was the addition of extensive multi-language support.
+
+The AI engineer adapted by building a robust FastAPI backend with MongoDB, creating detailed data models and RESTful API endpoints for each new feature. The frontend was then progressively refactored from using mock data to consuming these APIs. The development process involved creating new React components and pages, integrating services for API calls, managing application state with React Context, and addressing bugs like authentication errors and data structure mismatches. The final actions in the trajectory show the engineer beginning the implementation of internationalization (i18n) by installing necessary libraries and creating translation files.
+</analysis>
+
+<product_requirements>
+The goal is to build a professional, multi-purpose service offer (offerte) creation and management system. Initially conceived for a moving company (), the scope has expanded significantly.
+
+**Core Functionality:**
+The system must allow users (initially public, later admin-gated) to generate detailed service offers. The offer form should be dynamic, adapting its fields and pricing based on the selected service category.
+
+**Admin Panel Features:**
+A secure admin panel is the system's centerpiece, providing full control over the application's configuration and data.
+- **Company Settings:** Admins must be able to manage company details (name, address, logo), branding (site colors), and technical settings (SMTP for email).
+- **Service Management:** A modular system for defining service categories (e.g., Moving, Cleaning, Repair) and associated additional services (Zusatzleistungen). Admins must have full CRUD capabilities for both categories and services, including setting prices.
+- **Customer Management:** Admins must be able to add, view, edit, and delete customers. Customer creation is restricted to the admin panel.
+- **Offer & Invoice Management:** View all generated offers and create invoices based on them. This includes support for Swiss-specific QR-Bill invoicing.
+- **Financials:** Configure VAT (MwSt) and apply discounts.
+
+**Multi-Lingual Support:**
+The entire frontend, including the offer form and generated PDFs, must support multiple languages, including German, English, French, Italian, Turkish, Arabic, Spanish, and others.
+</product_requirements>
+
+<key_technical_concepts>
+- **Full-Stack Architecture:** React frontend, FastAPI (Python) backend, MongoDB database.
+- **RESTful API:** The backend exposes a comprehensive set of CRUD endpoints for managing settings, users, customers, services, offers, and invoices.
+- **Token-Based Authentication:** JWT for securing admin panel routes. An Axios interceptor on the frontend handles auth tokens and redirects on 401 errors.
+- **Dynamic Frontend:** React components that fetch data from the backend to dynamically render forms, lists, and settings based on admin configurations.
+- **State Management:** React Context API (, ) is used to manage global state like user authentication and company settings.
+- **Internationalization (i18n):** Using  and JSON files for multi-language support.
+</key_technical_concepts>
+
+<code_architecture>
+The application follows a standard monorepo structure with separate  and  directories.
+
+
+
+-   ****
+    -   **Importance:** This is the main entry point for the FastAPI application. It initializes the app, includes all the API routers from the  directory, and configures CORS middleware.
+    -   **Changes:** It was heavily modified from a simple Hello World endpoint to a comprehensive API gateway that imports and registers routers for authentication, settings, categories, services, offers, customers, and invoices, creating a structured and modular backend.
+
+-   ****
+    -   **Importance:** This file is the cornerstone of frontend-backend communication. It creates a centralized Axios instance and, critically, implements an interceptor to handle authentication.
+    -   **Changes:** It was created to manage API calls. Later, it was updated to conditionally redirect to the login page only for routes that include  and return a 401 status, fixing a critical bug where public pages were being improperly firewalled.
+
+-   ** & **
+    -   **Importance:** These are the core user-facing components for creating an offer. They manage a complex form state and interact with multiple API endpoints.
+    -   **Changes:** Initially static, they were completely refactored to be dynamic. They now fetch service categories, additional services, and existing customers from the backend. Logic was added to show/hide price inputs, pre-fill customer data, and disable fields accordingly. The data structure for services was changed from an object to an array, requiring significant logic updates.
+
+-   ****
+    -   **Importance:** This page provides the admin interface for customizing the application's appearance and behavior, including company information and SMTP settings.
+    -   **Changes:** Created to fulfill the user's request for high configurability. It was later fixed to correctly handle form state and API calls for updating settings, making the application's branding and email configuration manageable by the admin.
+</code_architecture>
+
+<pending_tasks>
+- **Swiss QR-Bill Invoicing:** The backend models () and routes have been created, but the frontend UI for invoice creation and the actual QR-Bill PDF generation logic are not implemented.
+- **Full i18n Integration:** While the setup for  has begun and some translation files have been created, the translation keys need to be integrated throughout all React components. Translation files for several requested languages are still missing.
+- **PDF Generation & Emailing:** The system for generating PDFs and emailing them to customers has been planned but not implemented. The SMTP settings UI exists, but the backend logic to use those settings is pending.
+</pending_tasks>
+
+<current_work>
+The most recent task was to implement a comprehensive multi-language system as requested by the user. The work began by installing the necessary libraries,  and , via yarn install v1.22.22
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+Done in 0.10s..
+
+Following the installation, the foundational structure for internationalization was created. This involved:
+1.  **Configuration:** A new file, , was created to configure the  instance. This file sets up the backend to load translation files, sets a default language (), and configures language detection.
+2.  **Translation Files:** A  directory was created to store the JSON translation files. Initial files were created for German (), English (), Turkish (), Arabic (), and Spanish (), populated with a few sample key-value pairs for translation.
+
+The AI engineer was in the process of adding the remaining language files (Persian, Kurdish, Dutch, Portuguese) to complete the setup phase before moving on to integrate the translation function ( hook) into the React components. The frontend has not yet been restarted or tested with these new i18n capabilities.
+</current_work>
+
+<optional_next_step>
+Continue creating the remaining language translation files (Persian, Kurdish, Dutch, Portuguese, etc.) in the  directory as requested.
+</optional_next_step>

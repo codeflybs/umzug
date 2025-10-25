@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Início",
+    "newOffer": "Nova Cotação",
+    "dashboard": "Painel",
+    "categories": "Categorias",
+    "services": "Serviços",
+    "customers": "Clientes",
+    "settings": "Configurações",
+    "logout": "Sair",
+    "adminLogin": "Login Admin"
+  },
+  "home": {
+    "title": "GELBE-MUDANÇAS",
+    "subtitle": "Cotações Profissionais de Mudança",
+    "description": "Crie cotações profissionais de mudança conforme padrões suíços - rápido, fácil e com painel de administração completo.",
+    "createOffer": "Criar Cotação",
+    "adminPanel": "Painel Admin",
+    "demoLogin": "Login Admin: admin / admin123"
+  },
+  "offer": {
+    "title": "Cotação",
+    "create": "Criar",
+    "preview": "Visualizar",
+    "print": "Imprimir / PDF",
+    "loadExample": "Carregar Exemplo"
+  },
+  "customer": {
+    "select": "Selecionar Cliente (Opcional)",
+    "new": "Novo Cliente (inserir manualmente)",
+    "autoFilled": "Dados do cliente foram preenchidos automaticamente",
+    "fromDatabase": "Dados do cliente carregados do banco de dados. Para editar, selecione 'Novo Cliente'."
+  },
+  "form": {
+    "offerNumber": "Nº da Cotação",
+    "offerDate": "Data da Cotação",
+    "customerNumber": "Nº do Cliente",
+    "contactPerson": "Pessoa de Contato",
+    "category": "Categoria de Serviço",
+    "currentLocation": "Localização Atual",
+    "newLocation": "Nova Localização",
+    "elevator": "Elevador Disponível",
+    "salutation": "Tratamento",
+    "firstName": "Primeiro Nome",
+    "lastName": "Sobrenome",
+    "street": "Rua",
+    "zipCode": "CEP",
+    "city": "Cidade",
+    "phone": "Telefone",
+    "email": "Email",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "create": "Criar",
+    "update": "Atualizar",
+    "delete": "Excluir",
+    "edit": "Editar"
+  },
+  "services": {
+    "additional": "Serviços Adicionais",
+    "noServices": "Nenhum serviço adicional disponível para esta categoria",
+    "clickToActivate": "Clique para ativar",
+    "price": "Preço"
+  },
+  "admin": {
+    "welcome": "Bem-vindo",
+    "overview": "Aqui está uma visão geral de suas cotações de mudança",
+    "totalOffers": "Total de Cotações",
+    "monthlyOffers": "Este Mês",
+    "totalRevenue": "Receita Total",
+    "activeOffers": "Cotações Ativas",
+    "recentOffers": "Cotações Recentes",
+    "quickActions": "Ações Rápidas",
+    "newCustomer": "Novo Cliente",
+    "allCustomers": "Todos os Clientes",
+    "newService": "Novo Serviço",
+    "newCategory": "Nova Categoria"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "confirm": "Confirmar",
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "yes": "Sim",
+    "no": "Não"
+  }
+}

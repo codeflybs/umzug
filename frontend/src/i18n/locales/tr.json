@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "newOffer": "Yeni Teklif",
+    "dashboard": "Panel",
+    "categories": "Kategoriler",
+    "services": "Hizmetler",
+    "customers": "Müşteriler",
+    "settings": "Ayarlar",
+    "logout": "Çıkış",
+    "adminLogin": "Admin Girişi"
+  },
+  "home": {
+    "title": "GELBE-TAŞIMA",
+    "subtitle": "Profesyonel Taşıma Teklifleri",
+    "description": "İsviçre standartlarında profesyonel taşıma teklifleri oluşturun - hızlı, kolay ve eksiksiz yönetim paneli ile.",
+    "createOffer": "Teklif Oluştur",
+    "adminPanel": "Yönetim Paneli",
+    "demoLogin": "Admin Girişi: admin / admin123"
+  },
+  "offer": {
+    "title": "Teklif",
+    "create": "Oluştur",
+    "preview": "Önizleme",
+    "print": "Yazdır / PDF",
+    "loadExample": "Örnek Teklif Yükle"
+  },
+  "customer": {
+    "select": "Müşteri Seç (Opsiyonel)",
+    "new": "Yeni Müşteri (manuel gir)",
+    "autoFilled": "Müşteri bilgileri otomatik dolduruldu",
+    "fromDatabase": "Müşteri bilgileri veritabanından yüklendi. Değiştirmek için 'Yeni Müşteri' seçin."
+  },
+  "form": {
+    "offerNumber": "Teklif No.",
+    "offerDate": "Teklif Tarihi",
+    "customerNumber": "Müşteri No.",
+    "contactPerson": "İletişim Kişisi",
+    "category": "Hizmet Kategorisi",
+    "currentLocation": "Mevcut Konum",
+    "newLocation": "Yeni Konum",
+    "elevator": "Asansör Var",
+    "salutation": "Unvan",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "street": "Sokak",
+    "zipCode": "Posta Kodu",
+    "city": "Şehir",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "create": "Oluştur",
+    "update": "Güncelle",
+    "delete": "Sil",
+    "edit": "Düzenle"
+  },
+  "services": {
+    "additional": "Ek Hizmetler",
+    "noServices": "Bu kategori için ek hizmet bulunmamaktadır",
+    "clickToActivate": "Etkinleştirmek için tıklayın",
+    "price": "Fiyat"
+  },
+  "admin": {
+    "welcome": "Hoş Geldiniz",
+    "overview": "İşte taşıma tekliflerinize genel bakış",
+    "totalOffers": "Toplam Teklifler",
+    "monthlyOffers": "Bu Ay",
+    "totalRevenue": "Toplam Gelir",
+    "activeOffers": "Aktif Teklifler",
+    "recentOffers": "Son Teklifler",
+    "quickActions": "Hızlı İşlemler",
+    "newCustomer": "Yeni Müşteri",
+    "allCustomers": "Tüm Müşteriler",
+    "newService": "Yeni Hizmet",
+    "newCategory": "Yeni Kategori"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "confirm": "Onayla",
+    "search": "Ara",
+    "filter": "Filtrele",
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "yes": "Evet",
+    "no": "Hayır"
+  }
+}

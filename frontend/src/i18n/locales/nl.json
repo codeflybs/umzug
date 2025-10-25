@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "newOffer": "Nieuwe Offerte",
+    "dashboard": "Dashboard",
+    "categories": "Categorieën",
+    "services": "Diensten",
+    "customers": "Klanten",
+    "settings": "Instellingen",
+    "logout": "Uitloggen",
+    "adminLogin": "Admin Login"
+  },
+  "home": {
+    "title": "GELBE-VERHUIZINGEN",
+    "subtitle": "Professionele Verhuisoffertes",
+    "description": "Maak professionele verhuisoffertes volgens Zwitserse normen - snel, eenvoudig en met compleet beheerpaneel.",
+    "createOffer": "Offerte Maken",
+    "adminPanel": "Admin Paneel",
+    "demoLogin": "Admin Login: admin / admin123"
+  },
+  "offer": {
+    "title": "Offerte",
+    "create": "Maken",
+    "preview": "Voorbeeld",
+    "print": "Printen / PDF",
+    "loadExample": "Voorbeeld Laden"
+  },
+  "customer": {
+    "select": "Klant Selecteren (Optioneel)",
+    "new": "Nieuwe Klant (handmatig invoeren)",
+    "autoFilled": "Klantgegevens zijn automatisch ingevuld",
+    "fromDatabase": "Klantgegevens geladen uit database. Om te wijzigen, selecteer 'Nieuwe Klant'."
+  },
+  "form": {
+    "offerNumber": "Offerte Nr.",
+    "offerDate": "Offerte Datum",
+    "customerNumber": "Klantnummer",
+    "contactPerson": "Contactpersoon",
+    "category": "Service Categorie",
+    "currentLocation": "Huidige Locatie",
+    "newLocation": "Nieuwe Locatie",
+    "elevator": "Lift Beschikbaar",
+    "salutation": "Aanhef",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "street": "Straat",
+    "zipCode": "Postcode",
+    "city": "Stad",
+    "phone": "Telefoon",
+    "email": "E-mail",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "create": "Maken",
+    "update": "Bijwerken",
+    "delete": "Verwijderen",
+    "edit": "Bewerken"
+  },
+  "services": {
+    "additional": "Extra Diensten",
+    "noServices": "Geen extra diensten beschikbaar voor deze categorie",
+    "clickToActivate": "Klik om te activeren",
+    "price": "Prijs"
+  },
+  "admin": {
+    "welcome": "Welkom",
+    "overview": "Hier is een overzicht van uw verhuisoffertes",
+    "totalOffers": "Totale Offertes",
+    "monthlyOffers": "Deze Maand",
+    "totalRevenue": "Totale Omzet",
+    "activeOffers": "Actieve Offertes",
+    "recentOffers": "Recente Offertes",
+    "quickActions": "Snelle Acties",
+    "newCustomer": "Nieuwe Klant",
+    "allCustomers": "Alle Klanten",
+    "newService": "Nieuwe Dienst",
+    "newCategory": "Nieuwe Categorie"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fout",
+    "success": "Succes",
+    "confirm": "Bevestigen",
+    "search": "Zoeken",
+    "filter": "Filter",
+    "active": "Actief",
+    "inactive": "Inactief",
+    "yes": "Ja",
+    "no": "Nee"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "newOffer": "Nuova Offerta",
+    "dashboard": "Dashboard",
+    "categories": "Categorie",
+    "services": "Servizi",
+    "customers": "Clienti",
+    "settings": "Impostazioni",
+    "logout": "Esci",
+    "adminLogin": "Login Admin"
+  },
+  "home": {
+    "title": "GELBE-TRASLOCHI",
+    "subtitle": "Preventivi Professionali per Traslochi",
+    "description": "Crea preventivi professionali per traslochi secondo gli standard svizzeri - veloce, facile e con pannello di amministrazione completo.",
+    "createOffer": "Crea Preventivo",
+    "adminPanel": "Pannello Admin",
+    "demoLogin": "Login Admin: admin / admin123"
+  },
+  "offer": {
+    "title": "Preventivo",
+    "create": "Crea",
+    "preview": "Anteprima",
+    "print": "Stampa / PDF",
+    "loadExample": "Carica Esempio"
+  },
+  "customer": {
+    "select": "Seleziona Cliente (Opzionale)",
+    "new": "Nuovo Cliente (inserisci manualmente)",
+    "autoFilled": "I dati del cliente sono stati compilati automaticamente",
+    "fromDatabase": "Dati del cliente caricati dal database. Per modificare, seleziona 'Nuovo Cliente'."
+  },
+  "form": {
+    "offerNumber": "N. Preventivo",
+    "offerDate": "Data Preventivo",
+    "customerNumber": "N. Cliente",
+    "contactPerson": "Persona di Contatto",
+    "category": "Categoria Servizio",
+    "currentLocation": "Posizione Attuale",
+    "newLocation": "Nuova Posizione",
+    "elevator": "Ascensore Disponibile",
+    "salutation": "Titolo",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "street": "Via",
+    "zipCode": "CAP",
+    "city": "Città",
+    "phone": "Telefono",
+    "email": "Email",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "create": "Crea",
+    "update": "Aggiorna",
+    "delete": "Elimina",
+    "edit": "Modifica"
+  },
+  "services": {
+    "additional": "Servizi Aggiuntivi",
+    "noServices": "Nessun servizio aggiuntivo disponibile per questa categoria",
+    "clickToActivate": "Clicca per attivare",
+    "price": "Prezzo"
+  },
+  "admin": {
+    "welcome": "Benvenuto",
+    "overview": "Ecco una panoramica dei tuoi preventivi di trasloco",
+    "totalOffers": "Preventivi Totali",
+    "monthlyOffers": "Questo Mese",
+    "totalRevenue": "Ricavi Totali",
+    "activeOffers": "Preventivi Attivi",
+    "recentOffers": "Preventivi Recenti",
+    "quickActions": "Azioni Rapide",
+    "newCustomer": "Nuovo Cliente",
+    "allCustomers": "Tutti i Clienti",
+    "newService": "Nuovo Servizio",
+    "newCategory": "Nuova Categoria"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "confirm": "Conferma",
+    "search": "Cerca",
+    "filter": "Filtra",
+    "active": "Attivo",
+    "inactive": "Inattivo",
+    "yes": "Sì",
+    "no": "No"
+  }
+}

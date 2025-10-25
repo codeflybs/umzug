@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "newOffer": "عرض جديد",
+    "dashboard": "لوحة التحكم",
+    "categories": "الفئات",
+    "services": "الخدمات",
+    "customers": "العملاء",
+    "settings": "الإعدادات",
+    "logout": "تسجيل الخروج",
+    "adminLogin": "تسجيل دخول المشرف"
+  },
+  "home": {
+    "title": "جيلبه للنقل",
+    "subtitle": "عروض نقل احترافية",
+    "description": "قم بإنشاء عروض نقل احترافية وفق المعايير السويسرية - بسرعة وسهولة ومع لوحة إدارة كاملة.",
+    "createOffer": "إنشاء عرض",
+    "adminPanel": "لوحة الإدارة",
+    "demoLogin": "تسجيل دخول المشرف: admin / admin123"
+  },
+  "offer": {
+    "title": "عرض",
+    "create": "إنشاء",
+    "preview": "معاينة",
+    "print": "طباعة / PDF",
+    "loadExample": "تحميل عرض توضيحي"
+  },
+  "customer": {
+    "select": "اختر العميل (اختياري)",
+    "new": "عميل جديد (أدخل يدوياً)",
+    "autoFilled": "تم ملء بيانات العميل تلقائياً",
+    "fromDatabase": "تم تحميل بيانات العميل من قاعدة البيانات. للتعديل، اختر 'عميل جديد'."
+  },
+  "form": {
+    "offerNumber": "رقم العرض",
+    "offerDate": "تاريخ العرض",
+    "customerNumber": "رقم العميل",
+    "contactPerson": "شخص الاتصال",
+    "category": "فئة الخدمة",
+    "currentLocation": "الموقع الحالي",
+    "newLocation": "الموقع الجديد",
+    "elevator": "يوجد مصعد",
+    "salutation": "اللقب",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "street": "الشارع",
+    "zipCode": "الرمز البريدي",
+    "city": "المدينة",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "delete": "حذف",
+    "edit": "تعديل"
+  },
+  "services": {
+    "additional": "الخدمات الإضافية",
+    "noServices": "لا توجد خدمات إضافية لهذه الفئة",
+    "clickToActivate": "انقر للتفعيل",
+    "price": "السعر"
+  },
+  "admin": {
+    "welcome": "مرحباً",
+    "overview": "إليك نظرة عامة على عروض النقل الخاصة بك",
+    "totalOffers": "إجمالي العروض",
+    "monthlyOffers": "هذا الشهر",
+    "totalRevenue": "إجمالي الإيرادات",
+    "activeOffers": "العروض النشطة",
+    "recentOffers": "العروض الأخيرة",
+    "quickActions": "إجراءات سريعة",
+    "newCustomer": "عميل جديد",
+    "allCustomers": "جميع العملاء",
+    "newService": "خدمة جديدة",
+    "newCategory": "فئة جديدة"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "confirm": "تأكيد",
+    "search": "بحث",
+    "filter": "تصفية",
+    "active": "نشط",
+    "inactive": "غير نشط",
+    "yes": "نعم",
+    "no": "لا"
+  }
+}

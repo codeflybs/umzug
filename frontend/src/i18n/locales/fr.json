@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "newOffer": "Nouvelle Offre",
+    "dashboard": "Tableau de bord",
+    "categories": "Catégories",
+    "services": "Services",
+    "customers": "Clients",
+    "settings": "Paramètres",
+    "logout": "Déconnexion",
+    "adminLogin": "Connexion Admin"
+  },
+  "home": {
+    "title": "GELBE-DÉMÉNAGEMENT",
+    "subtitle": "Devis de Déménagement Professionnels",
+    "description": "Créez des devis de déménagement professionnels selon les normes suisses - rapide, facile et avec panneau d'administration complet.",
+    "createOffer": "Créer un Devis",
+    "adminPanel": "Panneau Admin",
+    "demoLogin": "Connexion Admin: admin / admin123"
+  },
+  "offer": {
+    "title": "Devis",
+    "create": "Créer",
+    "preview": "Aperçu",
+    "print": "Imprimer / PDF",
+    "loadExample": "Charger un Exemple"
+  },
+  "customer": {
+    "select": "Sélectionner un Client (Optionnel)",
+    "new": "Nouveau Client (saisir manuellement)",
+    "autoFilled": "Les données client ont été remplies automatiquement",
+    "fromDatabase": "Données client chargées depuis la base de données. Pour modifier, sélectionnez 'Nouveau Client'."
+  },
+  "form": {
+    "offerNumber": "N° de Devis",
+    "offerDate": "Date du Devis",
+    "customerNumber": "N° Client",
+    "contactPerson": "Personne de Contact",
+    "category": "Catégorie de Service",
+    "currentLocation": "Emplacement Actuel",
+    "newLocation": "Nouvel Emplacement",
+    "elevator": "Ascenseur Disponible",
+    "salutation": "Civilité",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "street": "Rue",
+    "zipCode": "Code Postal",
+    "city": "Ville",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "create": "Créer",
+    "update": "Mettre à jour",
+    "delete": "Supprimer",
+    "edit": "Modifier"
+  },
+  "services": {
+    "additional": "Services Additionnels",
+    "noServices": "Aucun service additionnel disponible pour cette catégorie",
+    "clickToActivate": "Cliquer pour activer",
+    "price": "Prix"
+  },
+  "admin": {
+    "welcome": "Bienvenue",
+    "overview": "Voici un aperçu de vos devis de déménagement",
+    "totalOffers": "Total des Devis",
+    "monthlyOffers": "Ce Mois-ci",
+    "totalRevenue": "Chiffre d'Affaires Total",
+    "activeOffers": "Devis Actifs",
+    "recentOffers": "Devis Récents",
+    "quickActions": "Actions Rapides",
+    "newCustomer": "Nouveau Client",
+    "allCustomers": "Tous les Clients",
+    "newService": "Nouveau Service",
+    "newCategory": "Nouvelle Catégorie"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "confirm": "Confirmer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "yes": "Oui",
+    "no": "Non"
+  }
+}

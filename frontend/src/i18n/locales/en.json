@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Home",
+    "newOffer": "New Quote",
+    "dashboard": "Dashboard",
+    "categories": "Categories",
+    "services": "Services",
+    "customers": "Customers",
+    "settings": "Settings",
+    "logout": "Logout",
+    "adminLogin": "Admin Login"
+  },
+  "home": {
+    "title": "GELBE-MOVING",
+    "subtitle": "Professional Moving Quotes",
+    "description": "Create professional moving quotes in Swiss standard - fast, easy and with complete admin panel for management.",
+    "createOffer": "Create Quote",
+    "adminPanel": "Admin Panel",
+    "demoLogin": "Admin Login: admin / admin123"
+  },
+  "offer": {
+    "title": "Quote",
+    "create": "Create",
+    "preview": "Preview",
+    "print": "Print / PDF",
+    "loadExample": "Load Example Quote"
+  },
+  "customer": {
+    "select": "Select Customer (Optional)",
+    "new": "New Customer (enter manually)",
+    "autoFilled": "Customer data has been automatically filled",
+    "fromDatabase": "Customer data loaded from database. To edit, select 'New Customer'."
+  },
+  "form": {
+    "offerNumber": "Quote No.",
+    "offerDate": "Quote Date",
+    "customerNumber": "Customer Number",
+    "contactPerson": "Contact Person",
+    "category": "Service Category",
+    "currentLocation": "Current Location",
+    "newLocation": "New Location",
+    "elevator": "Elevator Available",
+    "salutation": "Salutation",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "street": "Street",
+    "zipCode": "ZIP Code",
+    "city": "City",
+    "phone": "Phone",
+    "email": "Email",
+    "save": "Save",
+    "cancel": "Cancel",
+    "create": "Create",
+    "update": "Update",
+    "delete": "Delete",
+    "edit": "Edit"
+  },
+  "services": {
+    "additional": "Additional Services",
+    "noServices": "No additional services available for this category",
+    "clickToActivate": "Click to activate",
+    "price": "Price"
+  },
+  "admin": {
+    "welcome": "Welcome",
+    "overview": "Here is an overview of your moving quotes",
+    "totalOffers": "Total Quotes",
+    "monthlyOffers": "This Month",
+    "totalRevenue": "Total Revenue",
+    "activeOffers": "Active Quotes",
+    "recentOffers": "Recent Quotes",
+    "quickActions": "Quick Actions",
+    "newCustomer": "New Customer",
+    "allCustomers": "All Customers",
+    "newService": "New Service",
+    "newCategory": "New Category"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "search": "Search",
+    "filter": "Filter",
+    "active": "Active",
+    "inactive": "Inactive",
+    "yes": "Yes",
+    "no": "No"
+  }
+}

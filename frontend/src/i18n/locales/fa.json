@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "خانه",
+    "newOffer": "پیشنهاد جدید",
+    "dashboard": "داشبورد",
+    "categories": "دسته‌بندی‌ها",
+    "services": "خدمات",
+    "customers": "مشتریان",
+    "settings": "تنظیمات",
+    "logout": "خروج",
+    "adminLogin": "ورود مدیر"
+  },
+  "home": {
+    "title": "GELBE-اسباب‌کشی",
+    "subtitle": "پیشنهادهای حرفه‌ای اسباب‌کشی",
+    "description": "پیشنهادهای حرفه‌ای اسباب‌کشی مطابق استانداردهای سوئیسی ایجاد کنید - سریع، آسان و با پنل مدیریت کامل.",
+    "createOffer": "ایجاد پیشنهاد",
+    "adminPanel": "پنل مدیریت",
+    "demoLogin": "ورود مدیر: admin / admin123"
+  },
+  "offer": {
+    "title": "پیشنهاد",
+    "create": "ایجاد",
+    "preview": "پیش‌نمایش",
+    "print": "چاپ / PDF",
+    "loadExample": "بارگذاری پیشنهاد نمونه"
+  },
+  "customer": {
+    "select": "انتخاب مشتری (اختیاری)",
+    "new": "مشتری جدید (دستی وارد کنید)",
+    "autoFilled": "اطلاعات مشتری به صورت خودکار پر شده است",
+    "fromDatabase": "اطلاعات مشتری از پایگاه داده بارگذاری شد. برای ویرایش، 'مشتری جدید' را انتخاب کنید."
+  },
+  "form": {
+    "offerNumber": "شماره پیشنهاد",
+    "offerDate": "تاریخ پیشنهاد",
+    "customerNumber": "شماره مشتری",
+    "contactPerson": "شخص تماس",
+    "category": "دسته‌بندی خدمات",
+    "currentLocation": "مکان فعلی",
+    "newLocation": "مکان جدید",
+    "elevator": "آسانسور موجود",
+    "salutation": "عنوان",
+    "firstName": "نام",
+    "lastName": "نام خانوادگی",
+    "street": "خیابان",
+    "zipCode": "کد پستی",
+    "city": "شهر",
+    "phone": "تلفن",
+    "email": "ایمیل",
+    "save": "ذخیره",
+    "cancel": "لغو",
+    "create": "ایجاد",
+    "update": "به‌روزرسانی",
+    "delete": "حذف",
+    "edit": "ویرایش"
+  },
+  "services": {
+    "additional": "خدمات اضافی",
+    "noServices": "هیچ خدمات اضافی برای این دسته‌بندی موجود نیست",
+    "clickToActivate": "برای فعال کردن کلیک کنید",
+    "price": "قیمت"
+  },
+  "admin": {
+    "welcome": "خوش آمدید",
+    "overview": "در اینجا نمایی کلی از پیشنهادهای اسباب‌کشی شما آمده است",
+    "totalOffers": "کل پیشنهادها",
+    "monthlyOffers": "این ماه",
+    "totalRevenue": "کل درآمد",
+    "activeOffers": "پیشنهادهای فعال",
+    "recentOffers": "پیشنهادهای اخیر",
+    "quickActions": "اقدامات سریع",
+    "newCustomer": "مشتری جدید",
+    "allCustomers": "همه مشتریان",
+    "newService": "خدمات جدید",
+    "newCategory": "دسته‌بندی جدید"
+  },
+  "common": {
+    "loading": "در حال بارگذاری...",
+    "error": "خطا",
+    "success": "موفقیت",
+    "confirm": "تأیید",
+    "search": "جستجو",
+    "filter": "فیلتر",
+    "active": "فعال",
+    "inactive": "غیرفعال",
+    "yes": "بله",
+    "no": "خیر"
+  }
+}

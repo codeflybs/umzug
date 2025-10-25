@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "newOffer": "Nueva Oferta",
+    "dashboard": "Panel",
+    "categories": "Categorías",
+    "services": "Servicios",
+    "customers": "Clientes",
+    "settings": "Configuración",
+    "logout": "Cerrar Sesión",
+    "adminLogin": "Iniciar Sesión Admin"
+  },
+  "home": {
+    "title": "GELBE-MUDANZAS",
+    "subtitle": "Cotizaciones Profesionales de Mudanza",
+    "description": "Cree cotizaciones profesionales de mudanza según estándares suizos - rápido, fácil y con panel de administración completo.",
+    "createOffer": "Crear Cotización",
+    "adminPanel": "Panel Admin",
+    "demoLogin": "Iniciar Sesión Admin: admin / admin123"
+  },
+  "offer": {
+    "title": "Cotización",
+    "create": "Crear",
+    "preview": "Vista Previa",
+    "print": "Imprimir / PDF",
+    "loadExample": "Cargar Ejemplo"
+  },
+  "customer": {
+    "select": "Seleccionar Cliente (Opcional)",
+    "new": "Nuevo Cliente (ingresar manualmente)",
+    "autoFilled": "Los datos del cliente se han completado automáticamente",
+    "fromDatabase": "Datos del cliente cargados desde la base de datos. Para editar, seleccione 'Nuevo Cliente'."
+  },
+  "form": {
+    "offerNumber": "Nº de Cotización",
+    "offerDate": "Fecha de Cotización",
+    "customerNumber": "Nº de Cliente",
+    "contactPerson": "Persona de Contacto",
+    "category": "Categoría de Servicio",
+    "currentLocation": "Ubicación Actual",
+    "newLocation": "Nueva Ubicación",
+    "elevator": "Ascensor Disponible",
+    "salutation": "Saludo",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "street": "Calle",
+    "zipCode": "Código Postal",
+    "city": "Ciudad",
+    "phone": "Teléfono",
+    "email": "Email",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "create": "Crear",
+    "update": "Actualizar",
+    "delete": "Eliminar",
+    "edit": "Editar"
+  },
+  "services": {
+    "additional": "Servicios Adicionales",
+    "noServices": "No hay servicios adicionales disponibles para esta categoría",
+    "clickToActivate": "Hacer clic para activar",
+    "price": "Precio"
+  },
+  "admin": {
+    "welcome": "Bienvenido",
+    "overview": "Aquí tienes un resumen de tus cotizaciones de mudanza",
+    "totalOffers": "Total de Cotizaciones",
+    "monthlyOffers": "Este Mes",
+    "totalRevenue": "Ingresos Totales",
+    "activeOffers": "Cotizaciones Activas",
+    "recentOffers": "Cotizaciones Recientes",
+    "quickActions": "Acciones Rápidas",
+    "newCustomer": "Nuevo Cliente",
+    "allCustomers": "Todos los Clientes",
+    "newService": "Nuevo Servicio",
+    "newCategory": "Nueva Categoría"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "confirm": "Confirmar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "yes": "Sí",
+    "no": "No"
+  }
+}

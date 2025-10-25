@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "newOffer": "Neue Offerte",
+    "dashboard": "Dashboard",
+    "categories": "Kategorien",
+    "services": "Services",
+    "customers": "Kunden",
+    "settings": "Einstellungen",
+    "logout": "Abmelden",
+    "adminLogin": "Admin Login"
+  },
+  "home": {
+    "title": "GELBE-UMZÜGE",
+    "subtitle": "Professionelle Umzugs-Offerten",
+    "description": "Erstellen Sie professionelle Umzugs-Offerten im Schweizer Standard - schnell, einfach und mit vollständigem Admin-Panel zur Verwaltung.",
+    "createOffer": "Offerte Erstellen",
+    "adminPanel": "Admin Panel",
+    "demoLogin": "Admin Login: admin / admin123"
+  },
+  "offer": {
+    "title": "Offerte",
+    "create": "Erstellen",
+    "preview": "Vorschau",
+    "print": "Drucken / PDF",
+    "loadExample": "Beispiel-Offerte laden"
+  },
+  "customer": {
+    "select": "Kunde auswählen (Optional)",
+    "new": "Neuer Kunde (manuell eingeben)",
+    "autoFilled": "Kundendaten wurden automatisch ausgefüllt",
+    "fromDatabase": "Kundendaten aus Datenbank geladen. Zum Ändern, wählen Sie 'Neuer Kunde' aus."
+  },
+  "form": {
+    "offerNumber": "Offert Nr.",
+    "offerDate": "Offertdatum",
+    "customerNumber": "Kundennummer",
+    "contactPerson": "Ansprechpartner",
+    "category": "Service-Kategorie",
+    "currentLocation": "Aktueller Standort",
+    "newLocation": "Neuer Standort",
+    "elevator": "Lift vorhanden",
+    "salutation": "Anrede",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "street": "Strasse",
+    "zipCode": "PLZ",
+    "city": "Ort",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "create": "Erstellen",
+    "update": "Aktualisieren",
+    "delete": "Löschen",
+    "edit": "Bearbeiten"
+  },
+  "services": {
+    "additional": "Zusatzleistungen",
+    "noServices": "Keine zusätzlichen Services für diese Kategorie verfügbar",
+    "clickToActivate": "Klicken Sie zum Aktivieren",
+    "price": "Preis"
+  },
+  "admin": {
+    "welcome": "Willkommen",
+    "overview": "Hier ist eine Übersicht über Ihre Umzugs-Offerten",
+    "totalOffers": "Gesamte Offerten",
+    "monthlyOffers": "Diesen Monat",
+    "totalRevenue": "Gesamtumsatz",
+    "activeOffers": "Aktive Offerten",
+    "recentOffers": "Neueste Offerten",
+    "quickActions": "Schnellaktionen",
+    "newCustomer": "Neuer Kunde",
+    "allCustomers": "Alle Kunden",
+    "newService": "Neuer Service",
+    "newCategory": "Neue Kategorie"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "confirm": "Bestätigen",
+    "search": "Suchen",
+    "filter": "Filter",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "yes": "Ja",
+    "no": "Nein"
+  }
+}

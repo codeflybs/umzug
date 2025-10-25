@@ -1,0 +1,16 @@
+/* Print styles for offer document */
+@media print {
+    header,
+    .print\\:hidden {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    @page {
+        margin: 1cm;
+        size: A4;
+    }
+}
