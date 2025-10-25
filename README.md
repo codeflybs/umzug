@@ -21,3 +21,4 @@
 
 - Backend konteyneri `backend/uploads` klasörünü volume olarak paylaşıyor; dosyalar host üzerinde kalıcıdır.
 - Geliştirme ortamında farklı portlar kullanacaksanız `REACT_APP_BACKEND_URL` değerini `docker-compose.yml` içindeki `frontend.build.args` bloğunda güncelleyin.
+# umzug
