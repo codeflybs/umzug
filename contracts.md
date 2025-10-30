@@ -14,18 +14,18 @@ Multi-purpose service quotation system supporting:
 ```json
 {
   "_id": "company_settings",
-  "companyName": "Gelbe-Umzüge",
-  "logo": "/uploads/logo.png",
+  "companyName": "Umzug UNIT GmbH",
+  "logo": "https://umzug-unit.ch/wp-content/uploads/2024/11/cropped-umzug-final.png",
   "addresses": [
     {
       "type": "hauptsitz",
-      "street": "Sandstrasse 5",
-      "city": "Schönbühl",
-      "zipCode": "3322",
+      "street": "Tulpenweg 22",
+      "city": "Lyss",
+      "zipCode": "3250",
       "country": "CH",
-      "phone": "031 557 24 31",
-      "email": "info@gelbe-umzuege.ch",
-      "website": "www.gelbe-umzuege.ch"
+      "phone": "032 310 70 60",
+      "email": "info@umzug-unit.ch",
+      "website": "www.umzug-unit.ch"
     }
   ],
   "theme": {
@@ -46,7 +46,7 @@ Multi-purpose service quotation system supporting:
     "smtpUser": "admin@company.com",
     "smtpPassword": "encrypted",
     "fromEmail": "noreply@company.com",
-    "fromName": "Gelbe-Umzüge"
+    "fromName": "Umzug UNIT GmbH"
   }
 }
 ```
