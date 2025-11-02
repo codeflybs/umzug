@@ -96,9 +96,36 @@ async def ensure_default_admin_user():
     await db.users.insert_one(admin_user)
     logger.info("Default admin user created (username: %s)", DEFAULT_ADMIN_USERNAME)
 
+async def ensure_company_settings():
+    """Ensure company settings document exists."""
+    from models.company_settings import CompanySettings, Address
+    
+    existing_settings = await db.company_settings.find_one({"_id": "company_settings"})
+    if existing_settings:
+        return
+    
+    # Create minimal default settings if none exist
+    default_settings = CompanySettings(
+        _id="company_settings",
+        companyName="Gelbe-Umzüge",
+        addresses=[Address(
+            type="hauptsitz",
+            street="Sandstrasse 5",
+            city="Schönbühl",
+            zipCode="3322",
+            country="CH",
+            phone="031 557 24 31",
+            email="info@gelbe-umzuege.ch",
+            website="www.gelbe-umzuege.ch"
+        )]
+    )
+    await db.company_settings.insert_one(default_settings.dict(by_alias=True))
+    logger.info("Default company settings created")
+
 @app.on_event("startup")
 async def startup_event():
     await ensure_default_admin_user()
+    await ensure_company_settings()
 
 @app.on_event("shutdown")
 async def shutdown_db_client():

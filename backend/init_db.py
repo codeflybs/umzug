@@ -41,28 +41,28 @@ async def init_database():
     if not existing_settings:
         company_settings = {
             "_id": "company_settings",
-            "companyName": "Gelbe-Umzüge",
-            "logo": "/uploads/logo.png",
+            "companyName": "Umzug UNIT GmbH",
+             "logo": "/uploads/logo.png",
             "addresses": [
                 {
                     "type": "hauptsitz",
-                    "street": "Sandstrasse 5",
-                    "city": "Schönbühl",
-                    "zipCode": "3322",
+                    "street": "Tulpenweg 22",
+                    "city": "Lyss",
+                    "zipCode": "3250",
                     "country": "CH",
-                    "phone": "031 557 24 31",
-                    "email": "info@gelbe-umzuege.ch",
-                    "website": "www.gelbe-umzuege.ch"
+                    "phone": "032 310 70 60",
+                    "email": "info@gumzug-unit.ch",
+                    "website": "www.umzug-unit.ch"
                 },
                 {
                     "type": "branch",
-                    "street": "Güterstrasse 204",
-                    "city": "Basel",
-                    "zipCode": "4053",
+                    "street": "Tulpenweg 22",
+                    "city": "Lyss",
+                    "zipCode": "3250",
                     "country": "CH",
-                    "phone": "031 557 24 31",
-                    "email": "info@gelbe-umzuege.ch",
-                    "website": "www.gelbe-umzuege.ch"
+                    "phone": "032 310 70 60",
+                    "email": "info@umzug-unit.ch",
+                    "website": "www.umzug-unit.ch"
                 }
             ],
             "theme": {
@@ -78,12 +78,12 @@ async def init_database():
                 "label": "MwSt"
             },
             "email": {
-                "smtpHost": "smtp.gmail.com",
+                "smtpHost": "mail.umzug-unit.ch",
                 "smtpPort": 587,
-                "smtpUser": "",
-                "smtpPassword": "",
-                "fromEmail": "noreply@gelbe-umzuege.ch",
-                "fromName": "Gelbe-Umzüge"
+                "smtpUser": "noreply@umzug-unit.ch",
+                "smtpPassword": "0766106108",
+                "fromEmail": "noreply@gumzug-unit.ch",
+                "fromName": "Umzug UNIT GmbH"
             }
         }
         await db.company_settings.insert_one(company_settings)

@@ -3,12 +3,15 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Package, LayoutDashboard, FileText, LogOut, Home, Settings, Grid3x3, Users, Briefcase, Menu, X } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { useSettings } from '../context/SettingsContext';
 import { useTranslation } from 'react-i18next';
+import { BACKEND_URL } from '../services/api';
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { user, logout } = useAuth();
+  const { settings } = useSettings();
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -122,12 +125,24 @@ const Header = () => {
             className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => navigate('/')}
           >
-            <div className="bg-yellow-500 p-2 rounded-lg">
-              <Package className="w-8 h-8 text-black" />
+            <div className="bg-yellow-500 p-2 rounded-lg flex items-center justify-center">
+              {settings?.logo ? (
+                <img 
+                  src={`${BACKEND_URL}${settings.logo}`} 
+                  alt="Company Logo" 
+                  className="w-8 h-8 object-contain" 
+                />
+              ) : (
+                <Package className="w-8 h-8 text-black" />
+              )}
             </div>
             <h1 className="text-2xl font-bold">
-              <span className="text-yellow-500">GELBE</span>
-              <span className="text-white">-UMZÜGE</span>
+              <span className="text-yellow-500">
+                {(settings?.companyName || 'GELBE-UMZÜGE').split('-')[0]}
+              </span>
+              <span className="text-white">
+                -{(settings?.companyName || 'GELBE-UMZÜGE').split('-')[1]}
+              </span>
             </h1>
           </div>
 

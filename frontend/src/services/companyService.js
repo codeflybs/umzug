@@ -38,6 +38,16 @@ export const companyService = {
     }
   },
 
+  deleteLogo: async () => {
+    try {
+      const response = await api.delete('/settings/logo');
+      return response.data;
+    } catch (error) {
+      console.error('Error deleting logo:', error);
+      throw error;
+    }
+  },
+
   updateTheme: async (theme) => {
     try {
       const response = await api.put('/settings/theme', theme);

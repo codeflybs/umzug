@@ -9,7 +9,7 @@ import { useAuth } from '../context/AuthContext';
 import { useSettings } from '../context/SettingsContext';
 import { companyService } from '../services/companyService';
 import { BACKEND_URL } from '../services/api';
-import { Building2, Palette, Mail, Receipt, Upload } from 'lucide-react';
+import { Building2, Palette, Mail, Receipt, Upload, Trash2, Image as ImageIcon } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
 
@@ -57,6 +57,30 @@ const AdminSettings = () => {
     const file = e.target.files[0];
     if (!file) return;
 
+    // Validate file type
+    const allowedTypes = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp'];
+    if (!allowedTypes.includes(file.type)) {
+      toast({
+        title: 'Ungültiger Dateityp',
+        description: 'Bitte laden Sie eine PNG, JPEG oder WEBP Datei hoch',
+        variant: 'destructive',
+      });
+      e.target.value = ''; // Reset file input
+      return;
+    }
+
+    // Validate file size (5MB)
+    const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+    if (file.size > maxSize) {
+      toast({
+        title: 'Datei zu groß',
+        description: `Die Datei darf maximal ${(maxSize / (1024 * 1024)).toFixed(1)}MB groß sein`,
+        variant: 'destructive',
+      });
+      e.target.value = ''; // Reset file input
+      return;
+    }
+
     try {
       setSaving(true);
       await companyService.uploadLogo(file);
@@ -65,10 +89,35 @@ const AdminSettings = () => {
         title: 'Erfolg!',
         description: 'Logo wurde erfolgreich hochgeladen',
       });
+      e.target.value = ''; // Reset file input
     } catch (error) {
       toast({
         title: 'Fehler',
-        description: 'Logo konnte nicht hochgeladen werden',
+        description: error.response?.data?.detail || 'Logo konnte nicht hochgeladen werden',
+        variant: 'destructive',
+      });
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleLogoDelete = async () => {
+    if (!confirm('Möchten Sie das Logo wirklich löschen?')) {
+      return;
+    }
+
+    try {
+      setSaving(true);
+      await companyService.deleteLogo();
+      await reload();
+      toast({
+        title: 'Erfolg!',
+        description: 'Logo wurde erfolgreich gelöscht',
+      });
+    } catch (error) {
+      toast({
+        title: 'Fehler',
+        description: error.response?.data?.detail || 'Logo konnte nicht gelöscht werden',
         variant: 'destructive',
       });
     } finally {
@@ -172,25 +221,69 @@ const AdminSettings = () => {
           <Card>
             <CardHeader>
               <CardTitle>Firmenlogo</CardTitle>
-              <CardDescription>Laden Sie Ihr Firmenlogo hoch (empfohlen: PNG, max 2MB)</CardDescription>
+              <CardDescription>
+                Laden Sie Ihr Firmenlogo hoch (PNG, JPEG, WEBP - max. 5MB)
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              {settings?.logo && (
-                <div className="mb-4">
-                  <img
-                    src={`${BACKEND_URL}${settings.logo}`}
-                    alt="Company Logo"
-                    className="h-20 object-contain"
-                  />
+              {settings?.logo ? (
+                <div className="space-y-4">
+                  <div className="flex items-center justify-center p-6 bg-gray-50 border-2 border-gray-200 rounded-lg">
+                    <img
+                      src={`${BACKEND_URL}${settings.logo}`}
+                      alt="Company Logo"
+                      className="max-h-32 object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2 sm:flex-row">
+                    <Button
+                      variant="outline"
+                      onClick={() => document.getElementById('logo-upload').click()}
+                      disabled={saving}
+                      className="w-full sm:w-auto"
+                    >
+                      <Upload className="w-4 h-4 mr-2" />
+                      Neues Logo hochladen
+                    </Button>
+                    <Button
+                      variant="destructive"
+                      onClick={handleLogoDelete}
+                      disabled={saving}
+                      className="w-full sm:w-auto"
+                    >
+                      <Trash2 className="w-4 h-4 mr-2" />
+                      Logo löschen
+                    </Button>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  <div className="flex flex-col items-center justify-center p-12 bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg hover:border-gray-400 transition-colors">
+                    <ImageIcon className="w-12 h-12 text-gray-400 mb-3" />
+                    <p className="text-sm text-gray-600 mb-4">Kein Logo hochgeladen</p>
+                    <Button
+                      variant="outline"
+                      onClick={() => document.getElementById('logo-upload').click()}
+                      disabled={saving}
+                    >
+                      <Upload className="w-4 h-4 mr-2" />
+                      Logo hochladen
+                    </Button>
+                  </div>
                 </div>
               )}
-              <div>
-                <Input
-                  type="file"
-                  accept="image/*"
-                  onChange={handleLogoUpload}
-                  disabled={saving}
-                />
+              <Input
+                id="logo-upload"
+                type="file"
+                accept="image/png,image/jpeg,image/jpg,image/webp"
+                onChange={handleLogoUpload}
+                disabled={saving}
+                className="hidden"
+              />
+              <div className="text-xs text-gray-500 space-y-1">
+                <p>• Unterstützte Formate: PNG, JPEG, WEBP</p>
+                <p>• Maximale Dateigröße: 5MB</p>
+                <p>• Empfohlene Auflösung: 512x512 Pixel oder höher</p>
               </div>
             </CardContent>
           </Card>
