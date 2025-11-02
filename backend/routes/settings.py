@@ -28,6 +28,52 @@ MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
 ALLOWED_IMAGE_TYPES = ["image/png", "image/jpeg", "image/jpg", "image/webp"]
 ALLOWED_EXTENSIONS = [".png", ".jpeg", ".jpg", ".webp"]
 
+def validate_upload_directory():
+    """
+    Validate that the upload directory exists and is writable.
+    Raises HTTPException if validation fails.
+    """
+    try:
+        # Ensure directory exists
+        UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+        
+        # Check if directory exists (after creation attempt)
+        if not UPLOAD_DIR.exists():
+            raise HTTPException(
+                status_code=500,
+                detail=f"Upload directory does not exist and could not be created: {UPLOAD_DIR.absolute()}"
+            )
+        
+        # Check if it's a directory (not a file)
+        if not UPLOAD_DIR.is_dir():
+            raise HTTPException(
+                status_code=500,
+                detail=f"Upload path exists but is not a directory: {UPLOAD_DIR.absolute()}"
+            )
+        
+        # Check write permissions by attempting to create a test file
+        test_file = UPLOAD_DIR / ".write_test"
+        try:
+            test_file.touch()
+            test_file.unlink()
+        except Exception as e:
+            raise HTTPException(
+                status_code=500,
+                detail=f"Upload directory is not writable: {UPLOAD_DIR.absolute()}. Error: {str(e)}"
+            )
+        
+        logger.debug(f"Upload directory validation passed: {UPLOAD_DIR.absolute()}")
+        return True
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Unexpected error validating upload directory: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to validate upload directory: {str(e)}"
+        )
+
 @router.get("/company")
 async def get_company_settings():
     """Get company settings (public)"""
@@ -129,6 +175,9 @@ async def upload_logo(
         )
     
     try:
+        # Validate upload directory before proceeding
+        validate_upload_directory()
+        
         # Read file content to check size
         contents = await file.read()
         file_size = len(contents)
@@ -138,6 +187,9 @@ async def upload_logo(
                 status_code=400,
                 detail=f"File too large. Maximum size is {MAX_FILE_SIZE / (1024*1024):.1f}MB"
             )
+        
+        # Log file details
+        logger.info(f"Uploading logo: {file.filename}, size: {file_size} bytes, type: {file.content_type}")
         
         # Get current settings to find old logo
         current_settings = await db.company_settings.find_one({"_id": "company_settings"})
@@ -202,6 +254,9 @@ async def delete_logo(current_user: dict = Depends(get_current_user)):
         raise HTTPException(status_code=403, detail="Admin access required")
     
     try:
+        # Validate upload directory before proceeding
+        validate_upload_directory()
+        
         # Get current settings to find logo
         current_settings = await db.company_settings.find_one({"_id": "company_settings"})
         
@@ -214,7 +269,11 @@ async def delete_logo(current_user: dict = Depends(get_current_user)):
         if logo_url.startswith("/uploads/"):
             file_path = UPLOAD_DIR / os.path.basename(logo_url)
             if file_path.exists():
+                logger.info(f"Deleting old logo file: {file_path.absolute()}")
                 file_path.unlink()
+                logger.info(f"Old logo file deleted successfully")
+            else:
+                logger.warning(f"Logo file not found on disk (may have been already deleted): {file_path.absolute()}")
         
         # Update database to remove logo
         await db.company_settings.update_one(
